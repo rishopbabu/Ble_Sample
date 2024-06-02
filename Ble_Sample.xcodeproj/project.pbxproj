@@ -10,12 +10,14 @@
 		6C1E9CB72C0CA1080053B040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CB62C0CA1080053B040 /* AppDelegate.swift */; };
 		6C1E9CB92C0CA1080053B040 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CB82C0CA1080053B040 /* SceneDelegate.swift */; };
 		6C1E9CBB2C0CA1080053B040 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CBA2C0CA1080053B040 /* ViewController.swift */; };
-		6C1E9CBE2C0CA1080053B040 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C1E9CBD2C0CA1080053B040 /* Base */; };
 		6C1E9CC02C0CA10B0053B040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C1E9CBF2C0CA10B0053B040 /* Assets.xcassets */; };
 		6C1E9CC32C0CA10B0053B040 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C1E9CC22C0CA10B0053B040 /* Base */; };
 		6C1E9CCE2C0CA10B0053B040 /* Ble_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CCD2C0CA10B0053B040 /* Ble_SampleTests.swift */; };
 		6C1E9CD82C0CA10B0053B040 /* Ble_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CD72C0CA10B0053B040 /* Ble_SampleUITests.swift */; };
 		6C1E9CDA2C0CA10B0053B040 /* Ble_SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CD92C0CA10B0053B040 /* Ble_SampleUITestsLaunchTests.swift */; };
+		6C1E9CE72C0CA2050053B040 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CE62C0CA2050053B040 /* ServicesViewController.swift */; };
+		6C1E9CEA2C0CA2260053B040 /* CharacteristicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CE92C0CA2260053B040 /* CharacteristicsViewController.swift */; };
+		6C1E9CEC2C0CA4170053B040 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CEB2C0CA4170053B040 /* BLEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		6C1E9CB62C0CA1080053B040 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C1E9CB82C0CA1080053B040 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6C1E9CBA2C0CA1080053B040 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6C1E9CBD2C0CA1080053B040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C1E9CBF2C0CA10B0053B040 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C1E9CC22C0CA10B0053B040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C1E9CC42C0CA10B0053B040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		6C1E9CD32C0CA10B0053B040 /* Ble_SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ble_SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C1E9CD72C0CA10B0053B040 /* Ble_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ble_SampleUITests.swift; sourceTree = "<group>"; };
 		6C1E9CD92C0CA10B0053B040 /* Ble_SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ble_SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6C1E9CE62C0CA2050053B040 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		6C1E9CE92C0CA2260053B040 /* CharacteristicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsViewController.swift; sourceTree = "<group>"; };
+		6C1E9CEB2C0CA4170053B040 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,9 @@
 				6C1E9CB62C0CA1080053B040 /* AppDelegate.swift */,
 				6C1E9CB82C0CA1080053B040 /* SceneDelegate.swift */,
 				6C1E9CBA2C0CA1080053B040 /* ViewController.swift */,
-				6C1E9CBC2C0CA1080053B040 /* Main.storyboard */,
+				6C1E9CE62C0CA2050053B040 /* ServicesViewController.swift */,
+				6C1E9CE92C0CA2260053B040 /* CharacteristicsViewController.swift */,
+				6C1E9CEB2C0CA4170053B040 /* BLEManager.swift */,
 				6C1E9CBF2C0CA10B0053B040 /* Assets.xcassets */,
 				6C1E9CC12C0CA10B0053B040 /* LaunchScreen.storyboard */,
 				6C1E9CC42C0CA10B0053B040 /* Info.plist */,
@@ -233,7 +239,6 @@
 			files = (
 				6C1E9CC02C0CA10B0053B040 /* Assets.xcassets in Resources */,
 				6C1E9CC32C0CA10B0053B040 /* Base in Resources */,
-				6C1E9CBE2C0CA1080053B040 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C1E9CBB2C0CA1080053B040 /* ViewController.swift in Sources */,
+				6C1E9CEC2C0CA4170053B040 /* BLEManager.swift in Sources */,
 				6C1E9CB72C0CA1080053B040 /* AppDelegate.swift in Sources */,
+				6C1E9CE72C0CA2050053B040 /* ServicesViewController.swift in Sources */,
 				6C1E9CB92C0CA1080053B040 /* SceneDelegate.swift in Sources */,
+				6C1E9CEA2C0CA2260053B040 /* CharacteristicsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C1E9CBC2C0CA1080053B040 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C1E9CBD2C0CA1080053B040 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6C1E9CC12C0CA10B0053B040 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,22 +440,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ble_Sample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ble-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ble-Samples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,22 +469,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ble_Sample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ble-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ble-Samples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
