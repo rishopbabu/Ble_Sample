@@ -1,7 +1,14 @@
-module: Ble
+output: Ble_Docs
+clean: true
+xcodebuild_arguments:
+ - -project
+ - Ble_Sample.xcodeproj
+ - -scheme
+ - Ble_Sample
+ - CODE_SIGNING_ALLOWED = NO
+module: Ble_Sample
 author: Rishop Babu
 author_url: http://yourwebsite.com
 github_url: https://github.com/yourusername/yourproject
-output: docs
+min_acl: internal
 theme: apple
-documentation: README.md

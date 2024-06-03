@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'Ble_Sample' in project 'Ble_Sample' (no dependencies)

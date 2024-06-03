@@ -1,0 +1,14 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "744ae4777634ec59df873f496b5bf002ff94fd97a8b26d4fda4360449bd2b1c6"
+build_start_time: [1717402802, 121838000]
+build_end_time: [1717402810, 314037000]
+inputs:
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/AppDelegate.swift": [1717335131, 749380189]
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/BLEManager.swift": [1717335144, 754531817]
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/CharacteristicsViewController.swift": [1717401010, 765660602]
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/NotifiedValueViewController.swift": [1717400833, 353663109]
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/SceneDelegate.swift": [1717335139, 988322308]
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/ServicesViewController.swift": [1717335394, 425633505]
+  "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/Ble_Sample/ViewController.swift": [1717335394, 437601102]
+  ? "/Users/mac-obs-51/Documents/iOS_Learning_Projects/Ble_Sample/build/Ble_Sample.build/Release-iphoneos/Ble_Sample.build/DerivedSources/GeneratedAssetSymbols.swift"
+  : [1717402801, 853027994]
