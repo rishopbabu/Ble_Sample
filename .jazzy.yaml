@@ -7,8 +7,11 @@ xcodebuild_arguments:
  - Ble_Sample
  - CODE_SIGNING_ALLOWED = NO
 module: Ble_Sample
-author: Rishop Babu
-author_url: http://yourwebsite.com
-github_url: https://github.com/yourusername/yourproject
+module_version: 1.0
+author: Rishop Babu, Ragul M
+author_url: https://github.com/rishopbabu
+github_url: https://github.com/rishopbabu/Ble_Sample.git
 min_acl: internal
+# Options : [apple | fullwidth | jony | DIRPATH]
+# Which theme to use. Specify either ‘apple’ (default), one of the other built-in theme names, or the path to your mustache templates and other assets for a custom theme.Default: apple
 theme: apple
