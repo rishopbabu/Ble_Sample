@@ -1,0 +1,7 @@
+module: Ble
+author: Rishop Babu
+author_url: http://yourwebsite.com
+github_url: https://github.com/yourusername/yourproject
+output: docs
+theme: apple
+documentation: README.md

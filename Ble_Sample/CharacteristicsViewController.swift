@@ -1,10 +1,3 @@
-//
-//  CharacteristicsViewController.swift
-//  Ble_Sample
-//
-//  Created by Rishop Babu on 02/06/24.
-//
-
 import UIKit
 import CoreBluetooth
 
@@ -15,6 +8,10 @@ class CharacteristicsViewController: UIViewController {
     var characteristics: [CBCharacteristic] = []
     var tableView: UITableView!
     let bleManager = BLEManager()
+    
+    // Define the specific characteristic UUIDs
+    let writeCharacteristicUUID = CBUUID(string: "C304")
+    let notifyCharacteristicUUID = CBUUID(string: "C305")
     
     /// Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
@@ -73,16 +70,13 @@ class CharacteristicsViewController: UIViewController {
     /// Handles the state based on the provided characteristic UUID.
     /// - Parameter state: The UUID of the characteristic that represents the state.
     func handleState(state: CBUUID) {
-        let uuidString = state.uuidString
-        switch uuidString {
-            case "00000001-0000-1000-8000-00805F9B34FB":
+        switch state {
+            case writeCharacteristicUUID:
                 sendLoginSuccessful()
-            case "00000005-0000-1000-8000-00805F9B34FB":
+            case notifyCharacteristicUUID:
                 sendHeartbeat()
-            case "00000010-0000-1000-8000-00805F9B34FB":
-                sendChargerRestart()
             default:
-                print("Unknown state: \(uuidString)")
+                print("Unknown state: \(state.uuidString)")
         }
     }
 }
@@ -115,11 +109,15 @@ extension CharacteristicsViewController: UITableViewDelegate, UITableViewDataSou
     ///   - indexPath: The index path locating the selected row in the table view.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let characteristic = characteristics[indexPath.row]
-        // Handle characteristic interaction here
         
-        // Example of sending data to characteristic
-        let dataToSend = Data([0x01, 0x02, 0x03])
-        peripheral.writeValue(dataToSend, for: characteristic, type: .withResponse)
+        if characteristic.uuid == writeCharacteristicUUID {
+            // Write data to characteristic
+            let dataToSend = Data([0x01, 0x02, 0x03])
+            peripheral.writeValue(dataToSend, for: characteristic, type: .withResponse)
+        } else if characteristic.uuid == notifyCharacteristicUUID {
+            // Enable notifications for the characteristic
+            peripheral.setNotifyValue(true, for: characteristic)
+        }
     }
 }
 
@@ -158,6 +156,26 @@ extension CharacteristicsViewController: CBPeripheralDelegate {
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    /// Tells the delegate that the peripheral has updated the value for a characteristic.
+    /// - Parameters:
+    ///   - peripheral: The peripheral providing this information.
+    ///   - characteristic: The characteristic whose value has been updated.
+    ///   - error: If an error occurred, the cause of the failure.
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        if let error = error {
+            print("Error updating value for characteristic \(characteristic.uuid): \(error.localizedDescription)")
+        } else {
+            guard let data = characteristic.value else { return }
+            let notifiedValue = data.map { String(format: "%02x", $0) }.joined()
+            print("Received notification for characteristic \(characteristic.uuid): \(notifiedValue)")
+            
+            // Present the notified value in a new view controller
+            let notifiedVC = NotifiedValueViewController()
+            notifiedVC.notifiedValue = notifiedValue
+            present(notifiedVC, animated: true, completion: nil)
         }
     }
 }

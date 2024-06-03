@@ -18,6 +18,7 @@
 		6C1E9CE72C0CA2050053B040 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CE62C0CA2050053B040 /* ServicesViewController.swift */; };
 		6C1E9CEA2C0CA2260053B040 /* CharacteristicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CE92C0CA2260053B040 /* CharacteristicsViewController.swift */; };
 		6C1E9CEC2C0CA4170053B040 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9CEB2C0CA4170053B040 /* BLEManager.swift */; };
+		6CB923A22C0DAC5A00A0C2B9 /* NotifiedValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB923A12C0DAC5A00A0C2B9 /* NotifiedValueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6C1E9CE62C0CA2050053B040 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		6C1E9CE92C0CA2260053B040 /* CharacteristicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsViewController.swift; sourceTree = "<group>"; };
 		6C1E9CEB2C0CA4170053B040 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		6CB923A12C0DAC5A00A0C2B9 /* NotifiedValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiedValueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				6C1E9CBA2C0CA1080053B040 /* ViewController.swift */,
 				6C1E9CE62C0CA2050053B040 /* ServicesViewController.swift */,
 				6C1E9CE92C0CA2260053B040 /* CharacteristicsViewController.swift */,
+				6CB923A12C0DAC5A00A0C2B9 /* NotifiedValueViewController.swift */,
 				6C1E9CEB2C0CA4170053B040 /* BLEManager.swift */,
 				6C1E9CBF2C0CA10B0053B040 /* Assets.xcassets */,
 				6C1E9CC12C0CA10B0053B040 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 				6C1E9CBB2C0CA1080053B040 /* ViewController.swift in Sources */,
 				6C1E9CEC2C0CA4170053B040 /* BLEManager.swift in Sources */,
 				6C1E9CB72C0CA1080053B040 /* AppDelegate.swift in Sources */,
+				6CB923A22C0DAC5A00A0C2B9 /* NotifiedValueViewController.swift in Sources */,
 				6C1E9CE72C0CA2050053B040 /* ServicesViewController.swift in Sources */,
 				6C1E9CB92C0CA1080053B040 /* SceneDelegate.swift in Sources */,
 				6C1E9CEA2C0CA2260053B040 /* CharacteristicsViewController.swift in Sources */,
@@ -441,9 +445,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J8G8DUU33R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ble_Sample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -455,9 +461,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ble-Samples";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opti.electricmiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ElectricMiles_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,9 +477,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J8G8DUU33R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ble_Sample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -484,9 +493,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ble-Samples";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opti.electricmiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ElectricMiles_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
