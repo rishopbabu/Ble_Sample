@@ -17,7 +17,7 @@
     <a title="AppDelegate Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Ble_Sample 1.0 Docs</a> (43% documented)</p>
+        <p><a href="../index.html">Ble_Sample 1.0 Docs</a> (83% documented)</p>
         <p class="header-right"><a href="https://github.com/rishopbabu/Ble_Sample.git"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
@@ -78,7 +78,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The application&rsquo;s delegate.</p>
 
           </section>
           <section class="section task-group-section">
@@ -97,7 +97,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This method is called after the application has launched and is used for initial setup.</p>
 
                       </div>
                       <div class="declaration">
@@ -107,6 +107,41 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>application</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The singleton app object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>launchOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A dictionary indicating the reason the app was launched (if any).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating whether the app successfully handled the launch request.</p>
                       </div>
                     </section>
                   </div>
@@ -137,7 +172,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This method is called when a new scene session is being created.
+Use this method to select a configuration to create the new scene with.</p>
 
                       </div>
                       <div class="declaration">
@@ -147,6 +183,53 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">configurationForConnecting</span> <span class="nv">connectingSceneSession</span><span class="p">:</span> <span class="kt">UISceneSession</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">UIScene</span><span class="o">.</span><span class="kt">ConnectionOptions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISceneConfiguration</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>application</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The singleton app object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectingSceneSession</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session being created.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Additional options for configuring the scene connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A configuration object that specifies the configuration for the new scene.</p>
                       </div>
                     </section>
                   </div>
@@ -164,7 +247,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This method is called when the user discards a scene session.
+If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+Use this method to release any resources that were specific to the discarded scenes, as they will not return.</p>
 
                       </div>
                       <div class="declaration">
@@ -175,6 +260,37 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>application</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The singleton app object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sceneSessions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The set of discarded scene sessions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -183,7 +299,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/rishopbabu" target="_blank" rel="external noopener">Rishop Babu, Ragul M</a>. All rights reserved. (Last updated: 2024-06-03)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/rishopbabu" target="_blank" rel="external noopener">Rishop Babu, Ragul M</a>. All rights reserved. (Last updated: 2024-06-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

@@ -8,13 +8,17 @@
 import UIKit
 import CoreBluetooth
 
+/// Main View Controller - ViewController
 class ViewController: UIViewController {
     
+    // MARK: - Properties
+
     private var centralManager: CBCentralManager!
     private var tableView: UITableView!
     private var bluetoothDevices: [CBPeripheral] = []
     private var selectedPeripheral: CBPeripheral?
     
+    // MARK: - View Did Load
     /// Called after the controller's view is loaded into memory. Initializes the central manager and sets up the table view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +26,17 @@ class ViewController: UIViewController {
         navigationItem.title = "BLE Devices"
         navigationItem.backButtonTitle = "back"
         
-        // Initialize the central manager
+        /// Initialize the central manager
         centralManager = CBCentralManager(delegate: self, queue: nil)
         
-        // Create the table view
+        /// Create the table view
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
         
-        // Set up constraints
+        /// Set up constraints
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -42,9 +46,9 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
+/// Extension ViewController - UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    // MARK: - UITableViewDataSource
     
     /// Returns the number of rows (Bluetooth devices) in the specified section.
     /// - Parameters:
@@ -80,8 +84,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
-    // MARK: - UITableViewDelegate
-    
     /// Tells the delegate that the specified row is now selected and connects to the selected peripheral.
     /// - Parameters:
     ///   - tableView: The table view informing the delegate about the new row selection.
@@ -93,6 +95,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - CBCentralManagerDelegate, CBPeripheralDelegate
+/// Extension ViewController - CBCentralManagerDelegate, CBPeripheralDelegate
 extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
     
     // MARK: - CBCentralManagerDelegate

@@ -8,11 +8,17 @@
 import Foundation
 import UIKit
 
+/// NotifiedValueViewController
 class NotifiedValueViewController: UIViewController {
     
+    // MARK: - Properties
+    /// Properties
     var notifiedValue: String!
     var valueLabel: UILabel!
     
+    // MARK: - View Did Load
+    
+    /// Called after the controller's view is loaded into memory. Sets up the table view and initiates service discovery on the peripheral.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +38,7 @@ class NotifiedValueViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissView))
     }
     
+    /// Dismiss the view
     @objc func dismissView() {
         dismiss(animated: true, completion: nil)
     }

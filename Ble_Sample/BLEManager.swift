@@ -7,7 +7,11 @@
 
 import CoreBluetooth
 
+/// BLEManager
 class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
+    
+    // MARK: - Properties
+
     var centralManager: CBCentralManager!
     var connectedPeripheral: CBPeripheral?
     var writeCharacteristic: CBCharacteristic?
@@ -18,6 +22,8 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
+    // MARK: - Ble Methods
+
     /// Called whenever the central manager's state is updated.
     /// - Parameter central: The central manager whose state has changed.
     func centralManagerDidUpdateState(_ central: CBCentralManager) {

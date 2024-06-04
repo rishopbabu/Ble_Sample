@@ -1,18 +1,22 @@
 import UIKit
 import CoreBluetooth
 
+/// CharacteristicsViewController
 class CharacteristicsViewController: UIViewController {
     
+    // MARK: - Properties
+    /// Properties
     var service: CBService!
     var peripheral: CBPeripheral!
     var characteristics: [CBCharacteristic] = []
     var tableView: UITableView!
     let bleManager = BLEManager()
     
-    // Define the specific characteristic UUIDs
+    /// Define the specific characteristic UUIDs
     let writeCharacteristicUUID = CBUUID(string: "C304")
     let notifyCharacteristicUUID = CBUUID(string: "C305")
     
+    // MARK: - View Did Load
     /// Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,7 @@ class CharacteristicsViewController: UIViewController {
         peripheral.discoverCharacteristics(nil, for: service)
     }
     
+    // MARK: - BLE Methods
     /// Sends a predefined login successful message to the peripheral.
     func sendLoginSuccessful() {
         let byteArray: [UInt8] = [
@@ -81,6 +86,8 @@ class CharacteristicsViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+/// Extension CharacteristicsViewController - UITableViewDelegate, UITableViewDataSource
 extension CharacteristicsViewController: UITableViewDelegate, UITableViewDataSource {
     /// Returns the number of rows (characteristics) in the specified section.
     /// - Parameters:
@@ -121,6 +128,8 @@ extension CharacteristicsViewController: UITableViewDelegate, UITableViewDataSou
     }
 }
 
+// MARK: - CBPeripheralDelegate
+/// Extension CharacteristicsViewController - CBPeripheralDelegate
 extension CharacteristicsViewController: CBPeripheralDelegate {
     
     /// Tells the delegate that the peripheral has discovered characteristics of a specified service.

@@ -8,13 +8,18 @@
 import UIKit
 import CoreBluetooth
 
+/// ServicesViewController
 class ServicesViewController: UIViewController {
     
+    // MARK: - Properties
+    /// Properties
     var peripheral: CBPeripheral!
     var services: [CBService] = []
     var tableView: UITableView!
     
-    /// /// Called after the controller's view is loaded into memory. Sets up the table view and initiates service discovery on the peripheral.
+    // MARK: - View Did Load
+    
+    /// Called after the controller's view is loaded into memory. Sets up the table view and initiates service discovery on the peripheral.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +45,8 @@ class ServicesViewController: UIViewController {
     
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+///  Extension ServicesViewController -  UITableViewDelegate UITableViewDataSource
 extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     /// Returns the number of rows (services) in the specified section.
     /// - Parameters:
@@ -75,6 +82,8 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - CBPeripheralDelegate
+/// Extension ServicesViewController - CBPeripheralDelegate
 extension ServicesViewController: CBPeripheralDelegate {
     
     /// Tells the delegate that the peripheral has discovered the services it supports.
